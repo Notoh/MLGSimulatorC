@@ -59,20 +59,19 @@ int main(int argc, char *argv[]) {
                     break;
                 }
             }
-            printf("\n\tYou bought %i Doritos.", attempt);
-            free(&attempt);
+            printf("\n\tYou now have %i Doritos.", doritos.count);
         } else if (amount < 0) {
             printf("\n\tDid you fail Grade 2 math? You can't buy a negative amount of Doritos.");
         }
-        free(&amount);
 
         printf("\n\tDo you want to buy any Mountain Dew? Mountain Dew costs %i per litre and earn %d MLG Points per "
                        "turn. If you do not wish to buy any type 0.\n",dew.cost, dew.PtsTurn);
 
-        scanf("%d",&amount);
-        if(amount > 0) {
+        int amount1;
+        scanf("%d",&amount1);
+        if(amount1 > 0) {
             int attempt = 0;
-            for(; attempt < amount; attempt++) {
+            for(; attempt < amount1; attempt++) {
                 if(MLGPoints - dew.cost >= 0) {
                     ++dew.count;
                     MLGPoints -= dew.cost;
@@ -80,13 +79,11 @@ int main(int argc, char *argv[]) {
                     printf("\n\tYou didn't have enough MLGPoints to buy all that Mountain Dew.");
                     break;
                 }
-                printf("\n\tYou bought %i litres of Mountain Dew.",  attempt);
-                free(&attempt);
+                printf("\n\tYou now have %i litres of Mountain Dew.",  dew.count);
             }
-        } else if(amount < 0) {
+        } else if(amount1 < 0) {
             printf("\n\tDid you fail Grade 2 math? You can't buy a negative quantity of Mountain Dew.");
         }
-        free(&amount);
         printf("\n\tTurn %i has ended.", i);
         printf("\n\t------------------------------------------------");
     }
