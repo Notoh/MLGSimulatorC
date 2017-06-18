@@ -79,8 +79,8 @@ int main(int argc, char *argv[]) {
                     printf("\n\tYou didn't have enough MLGPoints to buy all that Mountain Dew.");
                     break;
                 }
-                printf("\n\tYou now have %i litres of Mountain Dew.",  dew.count);
             }
+            printf("\n\tYou now have %i litres of Mountain Dew.",  dew.count);
         } else if(amount1 < 0) {
             printf("\n\tDid you fail Grade 2 math? You can't buy a negative quantity of Mountain Dew.");
         }
