@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
         printf("\n\tYou earned %d MLG Points this turn!",CalcPtsTurn());
         MLGPoints += CalcPtsTurn();
         printf("\n\tYou have %i MLG Points.", MLGPoints);
-        printf("\n\tCurrently you have %i Doritos and %d litres of Mountain Dew.", doritos.count,dew.count);
+        printf("\n\tCurrently you have %i Doritos and %d litre(s) of Mountain Dew.", doritos.count,dew.count);
 
         printf("\n\tDo you want to buy any Doritos? Doritos cost %i and earn %d MLG Points per turn. If you do not "
                        "wish to buy any type 0.\n",doritos.cost, doritos.PtsTurn);
